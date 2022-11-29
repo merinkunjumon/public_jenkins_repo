@@ -15,11 +15,12 @@ pipeline {
                sh 'mvn test'
            }
         } 
+    }
     post {
         success {
             slackSend channel: 'merinkunjumon95', message: 'Build for project ${BUILD_NUMBER} is sucessfull'
         }
         }
 }
-}
+
     
