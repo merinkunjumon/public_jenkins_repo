@@ -10,11 +10,11 @@ pipeline {
                 sh 'mvn compile'
             }
         }
-       /* stage('Test') {
+       stage('Test') {
            steps {
                sh 'mvn test'
            }
-        } */
+        } 
     }
     post {
         success {
