@@ -10,15 +10,15 @@ pipeline {
                 sh 'mvn compile'
             }
         }
-        stage('Test') {
+       /* stage('Test') {
            steps {
                sh 'mvn test'
            }
-        } 
+        } */
     }
     post {
         success {
-            slackSend channel: 'merinkunjumon95', message: 'Build for project ${BUILD_NUMBER} is sucessfull'
+            slackSend channel: 'merinkunjumon95', message: "Build for project ${BUILD_NUMBER} is sucessfull"
         }
         }
 }
